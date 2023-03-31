@@ -3,6 +3,8 @@ package com.gym.myworkoutmanager.domain.model;
 import jakarta.persistence.*;
 import org.springframework.lang.NonNull;
 
+import java.util.Set;
+
 @Entity
 public class Exercises {
 
@@ -25,6 +27,9 @@ public class Exercises {
     private String timeRest;
 
     private String annotation;
+
+    @ManyToMany
+    Set<Workout> workouts;
 
     public Exercises(@NonNull Long id, @NonNull String name, @NonNull Integer repetitions, @NonNull Integer series, @NonNull Integer weight, String timeRest, String annotation) {
         this.id = id;

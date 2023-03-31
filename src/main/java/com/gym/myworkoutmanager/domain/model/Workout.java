@@ -1,10 +1,9 @@
 package com.gym.myworkoutmanager.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.lang.NonNull;
+
+import java.util.Set;
 
 @Entity
 public class Workout {
@@ -18,6 +17,14 @@ public class Workout {
 
     @NonNull
     private Integer repetitions;
+
+    @ManyToMany
+    @JoinTable(
+            name = "workout_exercises",
+            joinColumns = @JoinColumn(name = "workout_id"),
+            inverseJoinColumns = @JoinColumn(name = "exercises_id")
+    )
+    Set<Exercises> exercises;
 
     public Workout(@NonNull Long id, @NonNull String name, @NonNull Integer repetitions) {
         this.id = id;

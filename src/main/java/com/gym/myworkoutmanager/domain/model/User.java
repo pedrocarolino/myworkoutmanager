@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import org.springframework.lang.NonNull;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class User implements Serializable {
@@ -21,11 +23,18 @@ public class User implements Serializable {
     @NonNull
     private String email;
 
-    public User(Long id, @NonNull String fullName, @NonNull String password, @NonNull String email) {
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Workout> wourkouts = new ArrayList<>();
+
+    public User(Long id, @NonNull String fullName, @NonNull String password, @NonNull String email, List<Workout> wourkouts) {
         this.id = id;
         this.fullName = fullName;
         this.password = password;
         this.email = email;
+        this.wourkouts = wourkouts;
     }
 
     public User() {
@@ -65,5 +74,13 @@ public class User implements Serializable {
 
     public void setEmail(@NonNull String email) {
         this.email = email;
+    }
+
+    public List<Workout> getWourkouts() {
+        return wourkouts;
+    }
+
+    public void setWourkouts(List<Workout> wourkouts) {
+        this.wourkouts = wourkouts;
     }
 }
