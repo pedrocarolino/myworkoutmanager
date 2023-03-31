@@ -1,0 +1,7 @@
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/repository/UserRepository.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/model/User.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/repository/WorkoutRepository.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/model/Exercises.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/model/Workout.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/MyworkoutmanagerApplication.java
+/home/pedro/Projetos/myworkoutmanager/src/main/java/com/gym/myworkoutmanager/domain/repository/ExercisesRepository.java

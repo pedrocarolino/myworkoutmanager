@@ -1,0 +1,7 @@
+com/gym/myworkoutmanager/domain/repository/WorkoutRepository.class
+com/gym/myworkoutmanager/domain/repository/ExercisesRepository.class
+com/gym/myworkoutmanager/domain/model/User.class
+com/gym/myworkoutmanager/MyworkoutmanagerApplication.class
+com/gym/myworkoutmanager/domain/model/Workout.class
+com/gym/myworkoutmanager/domain/model/Exercises.class
+com/gym/myworkoutmanager/domain/repository/UserRepository.class
