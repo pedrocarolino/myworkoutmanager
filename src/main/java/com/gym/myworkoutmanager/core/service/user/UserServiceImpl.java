@@ -1,6 +1,7 @@
-package com.gym.myworkoutmanager.core;
+package com.gym.myworkoutmanager.core.service.user;
 
 import com.gym.myworkoutmanager.api.DTO.UserDTO;
+import com.gym.myworkoutmanager.core.gateway.user.UserService;
 import com.gym.myworkoutmanager.domain.model.User;
 import com.gym.myworkoutmanager.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -8,10 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements  UserService {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-
 
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
