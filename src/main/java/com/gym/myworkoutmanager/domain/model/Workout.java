@@ -10,7 +10,6 @@ public class Workout {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NonNull
     private Long id;
     @NonNull
     private String name;
@@ -33,6 +32,11 @@ public class Workout {
     }
 
     public Workout() {}
+
+    public Workout(@NonNull String name, @NonNull Integer repetitions) {
+        this.name = name;
+        this.repetitions = repetitions;
+    }
 
     @NonNull
     public Long getId() {
